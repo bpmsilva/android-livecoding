@@ -19,5 +19,7 @@ local.properties
 .idea/workspace.xml
 
 # app .gitingore
-./app/build/
+app/build/
 
+# Ignora minhas anotações
+Anotações
