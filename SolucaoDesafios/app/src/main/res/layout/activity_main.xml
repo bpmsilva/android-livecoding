@@ -7,13 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/lotf_logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lotr_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
