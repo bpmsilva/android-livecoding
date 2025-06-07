@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Solucao Contador</string>
+    <string name="zero">0</string>
+    <string name="botao">Botão</string>
 </resources>
