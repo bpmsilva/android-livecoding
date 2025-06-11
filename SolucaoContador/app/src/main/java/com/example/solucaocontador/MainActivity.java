@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int contador = 0;
 
-    // As contantes para SharedPreferences são declaras como static final,
+    // As constantes para SharedPreferences são declaras como static final,
     // pois não devem ser alteradas durante a execução do aplicativo e pertencem à classe.
     private static final String PREFS_NAME = "contador_prefs";
     private static final String KEY_CONTADOR = "contador";
