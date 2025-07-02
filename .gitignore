@@ -26,3 +26,7 @@ Anotações
 
 # Ignora meus rascunhos de projetos
 scratch
+
+# Ignore Jupyter Notebooks
+.ipynb_checkpoints
+
