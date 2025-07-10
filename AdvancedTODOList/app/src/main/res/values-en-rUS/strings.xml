@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Advanced TODO List</string>
+    <string name="tarefa">Task</string>
+    <string name="remover_tarefa">Remove Task</string>
+    <string name="adicionar_tarefa">Add Task</string>
+    <string name="remover">Remove</string>
+</resources>

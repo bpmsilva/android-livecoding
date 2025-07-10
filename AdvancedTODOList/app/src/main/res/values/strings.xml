@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Advanced TODO List</string>
+    <string name="tarefa">Tarefa</string>
+    <string name="remover_tarefa">Remover Tarefa</string>
+    <string name="adicionar_tarefa">Adicionar Tarefa</string>
+    <string name="remover">Remover</string>
+</resources>
