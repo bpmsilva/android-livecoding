@@ -32,35 +32,47 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart chamado");
+        // Ideal para: ações que tornam a Activity visível, mas ainda não interativa.
+        // Ex: iniciar animações leves, preparar recursos visuais.
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume chamado");
+        // Ideal para: retomar interações com o usuário.
+        // Ex: iniciar câmera, sensores, ouvir localização, etc.
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause chamado");
+        // Ideal para: pausar ações que não devem continuar com a Activity em segundo plano.
+        // Ex: pausar vídeo, desligar sensores, salvar dados temporários.
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop chamado");
+        // Ideal para: liberar recursos que não são mais visíveis.
+        // Ex: encerrar conexões de rede, fechar banco de dados.
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG, "onRestart chamado");
+        // Ideal para: reconfigurar o que foi liberado no onStop, antes de voltar ao onStart.
+        // Ex: recarregar dados ou atualizar interface.
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy chamado");
+        // Ideal para: liberar todos os recursos antes da Activity ser destruída.
+        // Ex: fechar arquivos, desconectar serviços, limpar memória.
     }
 }
