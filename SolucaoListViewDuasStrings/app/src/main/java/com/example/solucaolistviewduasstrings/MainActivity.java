@@ -18,6 +18,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Aqui Map<String, String> é um dicionário onde a chave é o título e o valor é o autor
     private ArrayList<Map<String, String>> items = new ArrayList<>();
 
     @Override
@@ -40,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 this,
                 items,
                 android.R.layout.simple_list_item_2,
+                // As chaves correspondem às chaves do Map e devem ser apenas duas,
+                // pois o layout utilizado é simple_list_item_2
                 new String[]{"title", "author"},
+                // Os IDs correspondem aos TextViews no layout simple_list_item_2
                 new int[]{android.R.id.text1, android.R.id.text2}
         );
 
@@ -57,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 newItem.put("title", title);
                 newItem.put("author", author);
                 items.add(newItem);
+                // notifyDataSetChanged é necessário para atualizar a ListView,
+                // pois o adapter não sabe que os dados mudaram
                 adapter.notifyDataSetChanged();
                 titleEditText.setText("");
                 authorEditText.setText("");
