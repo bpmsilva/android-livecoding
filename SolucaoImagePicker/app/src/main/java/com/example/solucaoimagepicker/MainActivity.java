@@ -7,11 +7,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,10 +41,15 @@ public class MainActivity extends AppCompatActivity {
         selectedImage = findViewById(R.id.main_image_view);
 
         // Initialize the ActivityResultLauncher for picking images
+        // imagePickerLauncher = registerForActivityResult(
+        //         new ActivityResultContracts.StartActivityForResult(),
+        //         result -> onImagePicked(result) // Handle the result of the image picking.
+        //                                         // It could be implemented in another way.
+        // );
+
         imagePickerLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
-                result -> onImagePicked(result) // Handle the result of the image picking.
-                                                            // It could be implemented in another way.
+                new ImagePickerCallback()
         );
 
         selectedImage.setOnClickListener(v -> {
@@ -56,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         /*
          * A parte do código abaixo é responsável por exibir um DatePickerDialog quando o botão é clicado.
          */
-        datePickerButton = findViewById(R.id.date_picker_button);
+        /*
         datePickerButton.setOnClickListener(view -> {
             // Pega a data atual para definir o DatePickerDialog
             // Isto é feito para que o DatePickerDialog abra com a data atual selecionada.
@@ -74,6 +81,26 @@ public class MainActivity extends AppCompatActivity {
                         String data = selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear;
                         Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
                     },
+                    year, month, day
+            );
+
+            datePickerDialog.show();
+        }); */
+
+        datePickerButton = findViewById(R.id.date_picker_button);
+        datePickerButton.setOnClickListener(view -> {
+            // Pega a data atual para definir o DatePickerDialog
+            // Isto é feito para que o DatePickerDialog abra com a data atual selecionada.
+            final Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH); // Obs: o mês começa em 0 (janeiro = 0, dezembro = 11)
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+            // Cria o DatePickerDialog
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    MainActivity.this, // Passa o contexto da Activity
+                    // Assim como em onImagePicked, aqui lidamos com o resultado do DatePickerDialog.
+                    new DatePickerCallback(),
                     year, month, day
             );
 
@@ -96,4 +123,27 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private class ImagePickerCallback implements ActivityResultCallback<ActivityResult> {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+            if (result.getResultCode() == RESULT_OK) {
+                Intent data = result.getData();
+                if (data != null) {
+                    Uri selectedImageUri = data.getData();
+                    selectedImage.setImageURI(selectedImageUri);
+                }
+            }
+        }
+    }
+
+    private class DatePickerCallback implements DatePickerDialog.OnDateSetListener {
+        @Override
+        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+            // Handle the date selected by the user
+            String data = dayOfMonth + "/" + (month + 1) + "/" + year;
+            Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
