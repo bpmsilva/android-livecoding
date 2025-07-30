@@ -30,3 +30,5 @@ scratch
 # Ignore Jupyter Notebooks
 .ipynb_checkpoints
 
+# Ignora qualquer slides
+slides/
