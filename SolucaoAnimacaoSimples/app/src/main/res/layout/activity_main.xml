@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/fade_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fade In/Out" />
+
+    <Button
+        android:id="@+id/move_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mover Botão"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/rotate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Girar Imagem"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
