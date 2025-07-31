@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button startButton;
     private Handler handler = new Handler();
     private int progresso = 0;
+    private Runnable loadingRunnable;
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -38,14 +39,33 @@ public class MainActivity extends AppCompatActivity {
         progressDeterminate = findViewById(R.id.progress_determinate);
         startButton = findViewById(R.id.start_button);
 
-        startButton.setOnClickListener(v -> iniciarCarregamento());
+        startButton.setOnClickListener(v -> iniciarCarregamentov2());
     }
 
-    private void iniciarCarregamento() {
+    private void iniciarCarregamentov1() {
+        progresso = 0;
+        progressDeterminate.setProgress(0);
+        progressIndeterminate.setVisibility(ProgressBar.VISIBLE);
+        handler.postDelayed(runnable, 1000);
+    }
+
+    private void iniciarCarregamentov2() {
         progresso = 0;
         progressDeterminate.setProgress(0);
         progressIndeterminate.setVisibility(ProgressBar.VISIBLE);
 
-        handler.postDelayed(runnable, 300);
+        loadingRunnable = () -> {
+            progresso += 10;
+            progressDeterminate.setProgress(progresso);
+
+            if (progresso < 100) {
+                handler.postDelayed(loadingRunnable, 1000); // chama novamente após 300ms
+            } else {
+                progressIndeterminate.setVisibility(ProgressBar.GONE);
+                Toast.makeText(MainActivity.this, "Concluído!", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        handler.postDelayed(loadingRunnable, 1000);
     }
 }
