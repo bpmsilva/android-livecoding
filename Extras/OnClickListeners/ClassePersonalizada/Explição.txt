@@ -1,0 +1,4 @@
+1) Cria-se uma interface chamada `OnClickListener` que define um método `onClick()`.
+2) A classe `ClickPersonalizado` implementa a interface `OnClickListener`, definindo o comportamento do clique.
+3) A classe Botão possui um método `setOnClickListener` que permite definir o ouvinte de cliques.
+4) Quando o botão é clicado, ele chama o método `onClick()` do listener associado.
