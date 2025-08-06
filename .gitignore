@@ -32,3 +32,6 @@ scratch
 
 # Ignora qualquer slides
 slides/
+
+# Ignora .class files
+*.class
