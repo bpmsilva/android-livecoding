@@ -12,8 +12,13 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressBar progressIndeterminate, progressDeterminate;
     private Button startButton;
+
+    // Enviar e processar mensagens ou tarefas (Runnables)
+    // em uma Thread específica, geralmente a thread principal (UI thread).
     private Handler handler = new Handler();
     private int progresso = 0;
+
+    // Define uma tarefa a ser executada em paralelo ou agendada para o futuro.
     private Runnable loadingRunnable;
     private Runnable runnable = new Runnable() {
         @Override
