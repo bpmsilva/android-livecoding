@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:id="@+id/main"
     android:padding="24dp"
-    android:paddingTop="48dp"
+    android:layout_marginTop="48dp"
     tools:context=".MainActivity"
     tools:theme="@style/Theme.MyDemo.Material3"> <!-- Adiciona tema no Preview -->
 
