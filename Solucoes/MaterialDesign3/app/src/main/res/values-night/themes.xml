@@ -3,10 +3,12 @@
     <style name="Base.Theme.MaterialDesign3" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="sliderStyle">@style/Widget.Material3.Slider</item>
     </style>
   <!-- Base application theme. -->
     <style name="Base.Theme.MyDemo.Material3" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="sliderStyle">@style/Widget.Material3.Slider</item>
     </style>
 </resources>

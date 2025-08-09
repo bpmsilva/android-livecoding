@@ -15,16 +15,29 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Button buttonNext = findViewById(R.id.button_next);
-        buttonNext.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, MainSimple.class);
+        Button newMaterial3Button = findViewById(R.id.button_new_material3);
+        newMaterial3Button.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NewMaterial3Activity.class);
             startActivity(intent);
         });
 
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+        Button noMaterialButton = findViewById(R.id.button_no_material);
+        noMaterialButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NoMaterialActivity.class);
+            startActivity(intent);
+        });
+
+        Button completeExampleButton = findViewById(R.id.button_complete_example);
+        completeExampleButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CompleteExampleActivity.class);
+            startActivity(intent);
+        });
+
+        Button newNoMaterialButton = findViewById(R.id.button_new_no_material);
+        newNoMaterialButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NewNoMaterialActivity.class);
+            startActivity(intent);
+        });
+
     }
 }

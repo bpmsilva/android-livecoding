@@ -1,10 +1,18 @@
 <resources>
-    <string name="app_name">MaterialDesign3</string>
+    <string name="app_name">MyMD3Demo</string>
+    <string name="empty"></string>
+<!--    <string name="app_name">MaterialDesign3</string>-->
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="slider_volume">Ajuste de valor</string>
+    <string name="cd_more_options">Mais opções</string>
+    <string name="cd_open_menu">Abrir menu de navegação</string>
+
+
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

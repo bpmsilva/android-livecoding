@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/menu/menu_bottom_nav.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Label"
+        android:icon="@drawable/ic_dot_24"/>
+    <item
+        android:id="@+id/nav_explore"
+        android:title="Label"
+        android:icon="@drawable/ic_triangle_24"/>
+    <item
+        android:id="@+id/nav_notifs"
+        android:title="Label"
+        android:icon="@drawable/ic_bell_24"/>
+</menu>

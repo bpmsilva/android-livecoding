@@ -55,14 +55,44 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Botão estilizado com Material 3 -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_next"
+        android:id="@+id/button_new_material3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Tela Simples"
+        android:text="Material 3 Activity"
         app:cornerRadius="24dp"
         app:icon="@drawable/outline_arrow_forward_ios_48"
         app:iconGravity="textEnd"
         app:iconPadding="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_no_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Material Activity"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/outline_arrow_forward_ios_48"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_complete_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Example Button"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/outline_arrow_forward_ios_48"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_new_no_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New No Material Activity"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/outline_arrow_forward_ios_48"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp" />
+
 </LinearLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <!-- Slider com thumb circular garantido -->
+    <style name="Fix.MySlider" parent="Widget.Material3.Slider">
+        <item name="thumbRadius">12dp</item>
+        <item name="haloRadius">16dp</item>
+        <item name="trackHeight">4dp</item>
+        <item name="tickVisible">false</item>
+        <item name="labelBehavior">floating</item>
+    </style>
+
+    <!-- Overlay para avatar 100% circular -->
+    <style name="ShapeOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ButtonColor">
+        <item name="android:backgroundTint">@color/teal_200</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+</resources>
