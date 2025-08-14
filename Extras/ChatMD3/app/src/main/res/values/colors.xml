@@ -1,0 +1,27 @@
+<resources>
+    <!-- Primário: teal vibrante -->
+    <color name="md_theme_light_primary">#00BFA5</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#A7FFEB</color>
+    <color name="md_theme_light_onPrimaryContainer">#00201B</color>
+
+    <!-- Secundário: coral quente -->
+    <color name="md_theme_light_secondary">#FF6F61</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#FFDAD4</color>
+    <color name="md_theme_light_onSecondaryContainer">#410001</color>
+
+    <!-- Terciário: amarelo dourado -->
+    <color name="md_theme_light_tertiary">#FFC107</color>
+    <color name="md_theme_light_onTertiary">#000000</color>
+    <color name="md_theme_light_tertiaryContainer">#FFF4C1</color>
+    <color name="md_theme_light_onTertiaryContainer">#3A3000</color>
+
+    <!-- Fundo e superfícies -->
+    <color name="md_theme_light_background">#FAFAFA</color>
+    <color name="md_theme_light_onBackground">#1C1C1C</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_onSurface">#1C1C1C</color>
+    <color name="md_theme_light_surfaceVariant">#E0E0E0</color>
+    <color name="md_theme_light_outline">#757575</color>
+</resources>
