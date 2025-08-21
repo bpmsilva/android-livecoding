@@ -3,15 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_marginTop="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
     tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btnMore"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Mais opções"
+        android:src="@drawable/baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
         android:padding="16dp">
 
         <LinearLayout
@@ -20,9 +31,9 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp">
@@ -43,8 +54,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="Headline do Card"
                         android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
 
@@ -52,8 +63,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="2dp"
                         android:text="Subheadline"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
@@ -61,9 +72,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
-                        android:layout_marginHorizontal="16dp"
                         android:text="Este é um texto descritivo do Card. Ele pode conter informações adicionais sobre o conteúdo mostrado acima."
                         android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
 
@@ -71,8 +82,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="end"
+                        android:orientation="horizontal"
                         android:paddingHorizontal="8dp"
                         android:paddingBottom="8dp">
 
@@ -95,9 +106,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp">
@@ -118,8 +129,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="Headline do Card"
                         android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
 
@@ -127,8 +138,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="2dp"
                         android:text="Subheadline"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
@@ -136,9 +147,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
-                        android:layout_marginHorizontal="16dp"
                         android:text="Este é um texto descritivo do Card. Ele pode conter informações adicionais sobre o conteúdo mostrado acima."
                         android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
 
@@ -146,8 +157,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="end"
+                        android:orientation="horizontal"
                         android:paddingHorizontal="8dp"
                         android:paddingBottom="8dp">
 
@@ -170,9 +181,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp">
@@ -193,8 +204,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="Headline do Card"
                         android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
 
@@ -202,8 +213,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="2dp"
                         android:text="Subheadline"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
@@ -211,9 +222,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
-                        android:layout_marginHorizontal="16dp"
                         android:text="Este é um texto descritivo do Card. Ele pode conter informações adicionais sobre o conteúdo mostrado acima."
                         android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
 
@@ -221,8 +232,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="end"
+                        android:orientation="horizontal"
                         android:paddingHorizontal="8dp"
                         android:paddingBottom="8dp">
 
@@ -245,9 +256,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp">
@@ -268,8 +279,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="Headline do Card"
                         android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
 
@@ -277,8 +288,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
                         android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="2dp"
                         android:text="Subheadline"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
@@ -286,9 +297,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
-                        android:layout_marginHorizontal="16dp"
                         android:text="Este é um texto descritivo do Card. Ele pode conter informações adicionais sobre o conteúdo mostrado acima."
                         android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
 
@@ -296,8 +307,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="end"
+                        android:orientation="horizontal"
                         android:paddingHorizontal="8dp"
                         android:paddingBottom="8dp">
 
@@ -322,7 +333,6 @@
 
         </LinearLayout>
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
