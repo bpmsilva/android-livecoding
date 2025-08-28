@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         //                                         // It could be implemented in another way.
         // );
 
+        // Inicia um launcher que ainda não está conectado a um ImagePicker
         imagePickerLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ImagePickerCallback()
@@ -57,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             intent.setType("image/*");
             imagePickerLauncher.launch(intent);
+
+            // Acima tivemos um intent implítico. Se fossemos fazer um Intent explícito para outra activity, faríamos assim:
+            /*
+            Intent explicitIntent = new Intent(MainActivity.this, AnotherActivity.class);
+            startActivity(explicitIntent);
+            */
         });
 
 
@@ -87,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             datePickerDialog.show();
         }); */
 
+        // Semelhante a onImagePicked, aqui lidamos com o resultado do DatePickerDialog.
         datePickerButton = findViewById(R.id.date_picker_button);
         datePickerButton.setOnClickListener(view -> {
             // Pega a data atual para definir o DatePickerDialog
@@ -101,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this, // Passa o contexto da Activity
                     // Assim como em onImagePicked, aqui lidamos com o resultado do DatePickerDialog.
                     new DatePickerCallback(),
-                    year, month, day
+                    year, month, day // Passa a data atual para o DatePickerDialog
             );
 
             datePickerDialog.show();

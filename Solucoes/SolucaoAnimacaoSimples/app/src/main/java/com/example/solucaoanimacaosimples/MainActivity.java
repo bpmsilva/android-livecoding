@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Girar imagem com ObjectAnimator
         rotateButton.setOnClickListener(v -> {
-            ObjectAnimator anim = ObjectAnimator.ofFloat(image, View.ROTATION, 0f, 360f);
+                ObjectAnimator anim = ObjectAnimator.ofFloat(image, View.ROTATION, 0f, 360f);
             anim.setDuration(1000);
             anim.start();
         });
